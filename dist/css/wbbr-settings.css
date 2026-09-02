@@ -1,0 +1,94 @@
+/**
+ * Website Builder Block Restrictions — settings screen.
+ *
+ * Panel styling lifted from the Hale Components network dashboard
+ * (hc-network-dashboard.css) so this screen reads the same as the cache
+ * dashboard: a status panel on the left, controls on the right.
+ */
+
+.wbbr-dashboard-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+    max-width: 900px;
+}
+
+.wbbr-dashboard-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.wbbr-dashboard-left {
+    border-right: 1px solid #ddd;
+    flex: 1;
+    padding-right: 20px;
+}
+
+.wbbr-dashboard-right {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.wbbr-dashboard-left h4,
+.wbbr-dashboard-right h4 {
+    margin-top: 0;
+}
+
+.wbbr-status-on,
+.wbbr-status-off {
+    border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    padding: 2px 8px;
+}
+
+.wbbr-status-on {
+    background-color: #28a745;
+}
+
+.wbbr-status-off {
+    background-color: #dc3545;
+}
+
+.wbbr-dashboard-form {
+    margin: 15px 0 0;
+}
+
+.wbbr-block-list {
+    color: #50575e;
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    max-width: 900px;
+}
+
+.wbbr-block-list li {
+    break-inside: avoid;
+    margin: 0 0 4px;
+}
+
+@media screen and (max-width: 782px) {
+    .wbbr-dashboard-left {
+        border-bottom: 1px solid #ddd;
+        border-right: 0;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        padding-right: 0;
+    }
+
+    .wbbr-dashboard-right {
+        padding-left: 0;
+    }
+
+    .wbbr-block-list {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+}
